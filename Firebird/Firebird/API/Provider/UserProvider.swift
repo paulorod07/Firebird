@@ -29,7 +29,7 @@ class UserProvider: UserProviderProtocol {
             let userModel = body[Constants.ParametersKeys.userModel] as? UserModel
         else { return }
         
-        self.auth.createUser(withEmail: userModel.email, password: userModel.password) { result, error in
+        auth.createUser(withEmail: userModel.email, password: userModel.password) { result, error in
             if let error = error {
                 completionHandler(.failure(error))
             }
@@ -44,7 +44,7 @@ class UserProvider: UserProviderProtocol {
             let userModel = body[Constants.ParametersKeys.userModel] as? UserModel
         else { return }
         
-        self.auth.signIn(withEmail: userModel.email, password: userModel.password) { Result, error in
+        auth.signIn(withEmail: userModel.email, password: userModel.password) { Result, error in
             if let error = error {
                 completionHandler(.failure(error))
             }
