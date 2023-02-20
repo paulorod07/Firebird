@@ -1,5 +1,5 @@
 //
-//  UserBusiness.swift
+//  UserManager.swift
 //  Firebird
 //
 //  Created by Paulo Rodrigues on 19/02/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol UserBusinessProtocol {
+protocol UserManagerProtocol {
     func register(
         email: String,
         password: String,
@@ -20,17 +20,17 @@ protocol UserBusinessProtocol {
     )
 }
 
-class UserBusiness: UserBusinessProtocol {
+class UserManager: UserManagerProtocol {
     
-    let provider: UserProviderProtocol
+    let business: UserBusinessProtocol
     
-    init(provider: UserProviderProtocol) {
-        self.provider = provider
+    init(business: UserBusinessProtocol) {
+        self.business = business
     }
     
     func register(email: String, password: String, completionHandler: @escaping (Result<UserModel, Error>) -> Void) {
         
-        provider.register(parameters: getParameters(email, password)) { result in
+        business.register(email: email, password: password) { result in
             switch result {
                 case .success(let userModel):
                     completionHandler(.success(userModel))
@@ -43,7 +43,7 @@ class UserBusiness: UserBusinessProtocol {
     
     func login(email: String, password: String, completionHandler: @escaping (Result<UserModel, Error>) -> Void) {
         
-        provider.login(parameters: getParameters(email, password)) { result in
+        business.login(email: email, password: password) { result in
             switch result {
                 case .success(let userModel):
                     completionHandler(.success(userModel))
@@ -52,13 +52,6 @@ class UserBusiness: UserBusinessProtocol {
             }
         }
         
-    }
-    
-    private func getParameters(_ email: String, _ password: String) -> [AnyHashable:Any] {
-        let userModel = UserModel(email: email, password: password)
-        let parameters: [AnyHashable:Any] = [Constants.ParametersKeys.body:[Constants.ParametersKeys.userModel]]
-        
-        return parameters
     }
     
 }
