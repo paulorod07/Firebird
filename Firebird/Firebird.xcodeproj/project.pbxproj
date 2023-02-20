@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A9575D329A3486C007F3BD1 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9575D229A3486C007F3BD1 /* LoginTests.swift */; };
 		3AAA71BA29A29794000E6B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA71B929A29794000E6B5A /* AppDelegate.swift */; };
 		3AAA71BC29A29794000E6B5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA71BB29A29794000E6B5A /* SceneDelegate.swift */; };
 		3AAA71BE29A29794000E6B5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA71BD29A29794000E6B5A /* ViewController.swift */; };
@@ -18,10 +19,23 @@
 		3AE8500029A2B6170003B522 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE84FFF29A2B6170003B522 /* Constants.swift */; };
 		3AE8500229A304510003B522 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8500129A304510003B522 /* UserBusiness.swift */; };
 		3AE8500429A308DB0003B522 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8500329A308DB0003B522 /* UserManager.swift */; };
+		3AE8500C29A3204F0003B522 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8500B29A3204F0003B522 /* RegisterTests.swift */; };
+		3AE8501329A333A90003B522 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8501229A333A90003B522 /* GoogleService-Info.plist */; };
 		B6B9426E26CFC26144D69BD7 /* Pods_Firebird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65075765540B442E43C707AB /* Pods_Firebird.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3AE8500D29A3204F0003B522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AAA71AE29A29794000E6B5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AAA71B529A29794000E6B5A;
+			remoteInfo = Firebird;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3A9575D229A3486C007F3BD1 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		3AAA71B629A29794000E6B5A /* Firebird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAA71B929A29794000E6B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AAA71BB29A29794000E6B5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +49,9 @@
 		3AE84FFF29A2B6170003B522 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3AE8500129A304510003B522 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		3AE8500329A308DB0003B522 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		3AE8500929A3204F0003B522 /* FirebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE8500B29A3204F0003B522 /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
+		3AE8501229A333A90003B522 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53E5E76B78FA870CDF8C95E3 /* Pods-Firebird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebird.release.xcconfig"; path = "Target Support Files/Pods-Firebird/Pods-Firebird.release.xcconfig"; sourceTree = "<group>"; };
 		65075765540B442E43C707AB /* Pods_Firebird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B09DDA2C818486E7962743 /* Pods-Firebird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebird.debug.xcconfig"; path = "Target Support Files/Pods-Firebird/Pods-Firebird.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,14 +66,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AE8500629A3204F0003B522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A9575D029A34844007F3BD1 /* RegisterTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AAA71B729A29794000E6B5A /* Products */,
+			);
+			path = RegisterTests;
+			sourceTree = "<group>";
+		};
+		3A9575D129A34850007F3BD1 /* LoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9575D229A3486C007F3BD1 /* LoginTests.swift */,
+			);
+			path = LoginTests;
+			sourceTree = "<group>";
+		};
 		3AAA71AD29A29794000E6B5A = {
 			isa = PBXGroup;
 			children = (
 				3AAA71B829A29794000E6B5A /* Firebird */,
-				3AAA71B729A29794000E6B5A /* Products */,
+				3AE8500A29A3204F0003B522 /* FirebirdTests */,
 				85F8C2A25F545080D9E60735 /* Pods */,
 				D09958872F465744DF04E8B1 /* Frameworks */,
 			);
@@ -66,8 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				3AAA71B629A29794000E6B5A /* Firebird.app */,
+				3AE8500929A3204F0003B522 /* FirebirdTests.xctest */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		3AAA71B829A29794000E6B5A /* Firebird */ = {
@@ -77,6 +119,7 @@
 				3ACEC1E529A2AF1D00E03548 /* Application */,
 				3ACEC1E129A2AEC500E03548 /* API */,
 				3AAA71C729A2979A000E6B5A /* Info.plist */,
+				3AE8501229A333A90003B522 /* GoogleService-Info.plist */,
 			);
 			path = Firebird;
 			sourceTree = "<group>";
@@ -145,6 +188,16 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		3AE8500A29A3204F0003B522 /* FirebirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9575D129A34850007F3BD1 /* LoginTests */,
+				3A9575D029A34844007F3BD1 /* RegisterTests */,
+				3AE8500B29A3204F0003B522 /* RegisterTests.swift */,
+			);
+			path = FirebirdTests;
+			sourceTree = "<group>";
+		};
 		85F8C2A25F545080D9E60735 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +237,24 @@
 			productReference = 3AAA71B629A29794000E6B5A /* Firebird.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3AE8500829A3204F0003B522 /* FirebirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AE8500F29A3204F0003B522 /* Build configuration list for PBXNativeTarget "FirebirdTests" */;
+			buildPhases = (
+				3AE8500529A3204F0003B522 /* Sources */,
+				3AE8500629A3204F0003B522 /* Frameworks */,
+				3AE8500729A3204F0003B522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AE8500E29A3204F0003B522 /* PBXTargetDependency */,
+			);
+			name = FirebirdTests;
+			productName = FirebirdTests;
+			productReference = 3AE8500929A3204F0003B522 /* FirebirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,6 +267,10 @@
 				TargetAttributes = {
 					3AAA71B529A29794000E6B5A = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					3AE8500829A3204F0003B522 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3AAA71B529A29794000E6B5A;
 					};
 				};
 			};
@@ -213,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				3AAA71B529A29794000E6B5A /* Firebird */,
+				3AE8500829A3204F0003B522 /* FirebirdTests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,8 +299,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AAA71C629A2979A000E6B5A /* LaunchScreen.storyboard in Resources */,
+				3AE8501329A333A90003B522 /* GoogleService-Info.plist in Resources */,
 				3AAA71C329A2979A000E6B5A /* Assets.xcassets in Resources */,
 				3AAA71C129A29794000E6B5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE8500729A3204F0003B522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +372,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AE8500529A3204F0003B522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE8500C29A3204F0003B522 /* RegisterTests.swift in Sources */,
+				3A9575D329A3486C007F3BD1 /* LoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AE8500E29A3204F0003B522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AAA71B529A29794000E6B5A /* Firebird */;
+			targetProxy = 3AE8500D29A3204F0003B522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3AAA71BF29A29794000E6B5A /* Main.storyboard */ = {
@@ -482,6 +583,42 @@
 			};
 			name = Release;
 		};
+		3AE8501029A3204F0003B522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KCY8Z5247K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulorod07.firebird.FirebirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Firebird.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Firebird";
+			};
+			name = Debug;
+		};
+		3AE8501129A3204F0003B522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KCY8Z5247K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulorod07.firebird.FirebirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Firebird.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Firebird";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -499,6 +636,15 @@
 			buildConfigurations = (
 				3AAA71CB29A2979A000E6B5A /* Debug */,
 				3AAA71CC29A2979A000E6B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AE8500F29A3204F0003B522 /* Build configuration list for PBXNativeTarget "FirebirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE8501029A3204F0003B522 /* Debug */,
+				3AE8501129A3204F0003B522 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

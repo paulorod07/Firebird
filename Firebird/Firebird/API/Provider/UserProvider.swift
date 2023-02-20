@@ -27,14 +27,17 @@ class UserProvider: UserProviderProtocol {
         guard
             let body: NSDictionary = parameters[Constants.ParametersKeys.body] as? NSDictionary,
             let userModel = body[Constants.ParametersKeys.userModel] as? UserModel
-        else { return }
+        else {
+            completionHandler(.failure(NSError(domain: "erro ao realizar parse dos dados", code: -1)))
+            return
+        }
         
         auth.createUser(withEmail: userModel.email, password: userModel.password) { result, error in
             if let error = error {
                 completionHandler(.failure(error))
+            } else {
+                completionHandler(.success(userModel))
             }
-            
-            completionHandler(.success(userModel))
         }
     }
     
@@ -47,11 +50,10 @@ class UserProvider: UserProviderProtocol {
         auth.signIn(withEmail: userModel.email, password: userModel.password) { Result, error in
             if let error = error {
                 completionHandler(.failure(error))
+            } else {
+                completionHandler(.success(userModel))
             }
-            
-            completionHandler(.success(userModel))
         }
     }
-    
     
 }
