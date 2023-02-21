@@ -21,6 +21,7 @@
 		3AE8500429A308DB0003B522 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8500329A308DB0003B522 /* UserManager.swift */; };
 		3AE8500C29A3204F0003B522 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8500B29A3204F0003B522 /* RegisterTests.swift */; };
 		3AE8501329A333A90003B522 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8501229A333A90003B522 /* GoogleService-Info.plist */; };
+		3AF6A63229A4A41F0074700A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6A63129A4A41F0074700A /* LoginViewController.swift */; };
 		B6B9426E26CFC26144D69BD7 /* Pods_Firebird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65075765540B442E43C707AB /* Pods_Firebird.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		3AE8500929A3204F0003B522 /* FirebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE8500B29A3204F0003B522 /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
 		3AE8501229A333A90003B522 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AF6A63129A4A41F0074700A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		53E5E76B78FA870CDF8C95E3 /* Pods-Firebird.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebird.release.xcconfig"; path = "Target Support Files/Pods-Firebird/Pods-Firebird.release.xcconfig"; sourceTree = "<group>"; };
 		65075765540B442E43C707AB /* Pods_Firebird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B09DDA2C818486E7962743 /* Pods-Firebird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebird.debug.xcconfig"; path = "Target Support Files/Pods-Firebird/Pods-Firebird.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +117,10 @@
 		3AAA71B829A29794000E6B5A /* Firebird */ = {
 			isa = PBXGroup;
 			children = (
-				3AE84FFE29A2B5F90003B522 /* Infrastructure */,
+				3AF6A63029A4A3ED0074700A /* Controllers */,
 				3ACEC1E529A2AF1D00E03548 /* Application */,
 				3ACEC1E129A2AEC500E03548 /* API */,
+				3AE84FFE29A2B5F90003B522 /* Infrastructure */,
 				3AAA71C729A2979A000E6B5A /* Info.plist */,
 				3AE8501229A333A90003B522 /* GoogleService-Info.plist */,
 			);
@@ -164,7 +167,6 @@
 			children = (
 				3AAA71B929A29794000E6B5A /* AppDelegate.swift */,
 				3AAA71BB29A29794000E6B5A /* SceneDelegate.swift */,
-				3AAA71BD29A29794000E6B5A /* HomeViewController.swift */,
 				3AAA71BF29A29794000E6B5A /* Main.storyboard */,
 				3AAA71C229A2979A000E6B5A /* Assets.xcassets */,
 				3AAA71C429A2979A000E6B5A /* LaunchScreen.storyboard */,
@@ -196,6 +198,15 @@
 				3AE8500B29A3204F0003B522 /* RegisterTests.swift */,
 			);
 			path = FirebirdTests;
+			sourceTree = "<group>";
+		};
+		3AF6A63029A4A3ED0074700A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AAA71BD29A29794000E6B5A /* HomeViewController.swift */,
+				3AF6A63129A4A41F0074700A /* LoginViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		85F8C2A25F545080D9E60735 /* Pods */ = {
@@ -361,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF6A63229A4A41F0074700A /* LoginViewController.swift in Sources */,
 				3AAA71BE29A29794000E6B5A /* HomeViewController.swift in Sources */,
 				3AAA71BA29A29794000E6B5A /* AppDelegate.swift in Sources */,
 				3AAA71BC29A29794000E6B5A /* SceneDelegate.swift in Sources */,

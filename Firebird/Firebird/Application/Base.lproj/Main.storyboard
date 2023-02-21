@@ -11,7 +11,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Firebird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Firebird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="2334" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="YOb-Vv-8WI">
             <objects>
-                <viewController id="RG7-Pp-QgV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="RG7-Pp-QgV" customClass="LoginViewController" customModule="Firebird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q45-mQ-emo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,9 @@
                                 <color key="tintColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="RG7-Pp-QgV" eventType="touchUpInside" id="qxx-Ux-9Vr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkI-cg-En9">
                                 <rect key="frame" x="30" y="421" width="333" height="40"/>
@@ -75,6 +78,9 @@
                                 <color key="tintColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="RG7-Pp-QgV" eventType="touchUpInside" id="spM-gA-mH0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUs-3K-Ca5">
                                 <rect key="frame" x="30" y="240" width="48" height="21"/>
@@ -112,6 +118,10 @@
                             <constraint firstItem="z0u-hF-ZEe" firstAttribute="top" secondItem="nSR-2S-m4X" secondAttribute="bottom" constant="40" id="y1g-zq-WRD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fRd-Ua-Hfr" id="YKj-v4-VUo"/>
+                        <outlet property="passwordTextField" destination="nSR-2S-m4X" id="nRg-a1-nvi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-3b-biX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
