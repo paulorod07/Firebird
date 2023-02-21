@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  Firebird
 //
 //  Created by Paulo Rodrigues on 21/02/23.
@@ -8,27 +8,32 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.text = "teste@teste99.com"
-        passwordTextField.text = "abc123456"
     }
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
         if let email = emailTextField.text,
-           let password = passwordTextField.text {
+           let password = passwordTextField.text,
+           let confirmPassword = confirmPasswordTextField.text {
+            
+            if password != confirmPassword {
+                showMessage(title: "Atenção", message: "senha está diferente da confirmação de senha")
+                return
+            }
             
             let provider = UserProvider()
             let business = UserBusiness(provider: provider)
             let manager = UserManager(business: business)
             
-            manager.login(email: email, password: password) { result in
-                
+            manager.register(email: email, password: password) { result in
+                 
                 switch result {
                     case .success:
                         self.routeToHome()
@@ -41,16 +46,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func registerButtonTapped(_ sender: UIButton) {
-        routeToRegister()
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        routeToLogin()
     }
     
-    func showMessage(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        
-        present(alert, animated: true)
+    func routeToLogin() {
+        dismiss(animated: true)
     }
     
     func routeToHome() {
@@ -61,12 +62,12 @@ class LoginViewController: UIViewController {
         present(homeVC ?? UIViewController(), animated: true)
     }
     
-    func routeToRegister() {
-        let registerVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+    func showMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        registerVC?.modalPresentationStyle = .fullScreen
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
         
-        present(registerVC ?? UIViewController(), animated: true)
+        present(alert, animated: true)
     }
     
 }

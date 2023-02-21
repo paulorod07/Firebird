@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="937" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="g7a-wQ-9PO">
             <objects>
-                <viewController id="CBF-n0-X11" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="CBF-n0-X11" customClass="RegisterViewController" customModule="Firebird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="woM-Gz-DHm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,9 @@
                                 <color key="tintColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="CBF-n0-X11" eventType="touchUpInside" id="SqH-2g-DFY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXi-9S-GM1">
                                 <rect key="frame" x="30" y="522" width="333" height="40"/>
@@ -181,6 +184,9 @@
                                 <color key="tintColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="CBF-n0-X11" eventType="touchUpInside" id="8gV-l0-nuB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmação de senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSa-sw-0BR">
                                 <rect key="frame" x="30" y="341" width="171.33333333333334" height="21"/>
@@ -223,6 +229,11 @@
                             <constraint firstItem="Geh-O1-jbb" firstAttribute="trailing" secondItem="VRH-Ai-SxR" secondAttribute="trailing" constant="30" id="sOF-mP-O9y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="YsP-6P-j3o" id="S52-Kd-Q4o"/>
+                        <outlet property="emailTextField" destination="RCw-0t-lHD" id="nDP-e1-DiV"/>
+                        <outlet property="passwordTextField" destination="J8f-nT-DOr" id="nYw-t0-ARO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLQ-8Y-FUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
