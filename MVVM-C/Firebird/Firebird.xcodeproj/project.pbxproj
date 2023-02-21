@@ -18,6 +18,10 @@
 		3A226B9329A56D8A004D80D1 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A226B8529A56D8A004D80D1 /* UserProvider.swift */; };
 		3A226B9429A56D8A004D80D1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A226B8729A56D8A004D80D1 /* UserManager.swift */; };
 		3A226B9529A56D8A004D80D1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A226B8929A56D8A004D80D1 /* UserModel.swift */; };
+		3A55A6F429A57272007A32DB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A6F329A57272007A32DB /* Coordinator.swift */; };
+		3A55A6F629A573EE007A32DB /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A6F529A573EE007A32DB /* LoginCoordinator.swift */; };
+		3A55A6F829A574F6007A32DB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A6F729A574F6007A32DB /* UIColor+Extension.swift */; };
+		3A55A6FC29A5767C007A32DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A6FB29A5767C007A32DB /* LoginViewController.swift */; };
 		3A90AFC029A56BB600865399 /* FirebirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFBF29A56BB600865399 /* FirebirdTests.swift */; };
 		3A90AFCA29A56BB600865399 /* FirebirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFC929A56BB600865399 /* FirebirdUITests.swift */; };
 		3A90AFCC29A56BB600865399 /* FirebirdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFCB29A56BB600865399 /* FirebirdUITestsLaunchTests.swift */; };
@@ -57,6 +61,10 @@
 		3A226B8529A56D8A004D80D1 /* UserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		3A226B8729A56D8A004D80D1 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		3A226B8929A56D8A004D80D1 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3A55A6F329A57272007A32DB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3A55A6F529A573EE007A32DB /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		3A55A6F729A574F6007A32DB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		3A55A6FB29A5767C007A32DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A90AFA529A56BB400865399 /* Firebird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A90AFB629A56BB600865399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A90AFBB29A56BB600865399 /* FirebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3A226B8029A56D8A004D80D1 /* Constants.swift */,
+				3A55A6F729A574F6007A32DB /* UIColor+Extension.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -164,6 +173,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3A55A6F229A5724E007A32DB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3A55A6F329A57272007A32DB /* Coordinator.swift */,
+				3A55A6F529A573EE007A32DB /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3A55A6F929A57656007A32DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A55A6FA29A57667007A32DB /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A55A6FA29A57667007A32DB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3A55A6FB29A5767C007A32DB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		3A90AF9C29A56BB400865399 = {
 			isa = PBXGroup;
 			children = (
@@ -189,8 +223,10 @@
 		3A90AFA729A56BB400865399 /* Firebird */ = {
 			isa = PBXGroup;
 			children = (
+				3A55A6F929A57656007A32DB /* Controllers */,
 				3A226B7629A56D8A004D80D1 /* Application */,
 				3A226B8129A56D8A004D80D1 /* API */,
+				3A55A6F229A5724E007A32DB /* Coordinator */,
 				3A226B7F29A56D8A004D80D1 /* Infrastructure */,
 				3A90AFB629A56BB600865399 /* Info.plist */,
 				3A226B7529A56D89004D80D1 /* GoogleService-Info.plist */,
@@ -477,14 +513,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A55A6FC29A5767C007A32DB /* LoginViewController.swift in Sources */,
 				3A226B9229A56D8A004D80D1 /* UserBusiness.swift in Sources */,
 				3A226B9329A56D8A004D80D1 /* UserProvider.swift in Sources */,
+				3A55A6F629A573EE007A32DB /* LoginCoordinator.swift in Sources */,
+				3A55A6F829A574F6007A32DB /* UIColor+Extension.swift in Sources */,
 				3A226B8B29A56D8A004D80D1 /* ViewController.swift in Sources */,
 				3A226B8F29A56D8A004D80D1 /* AppDelegate.swift in Sources */,
 				3A226B9129A56D8A004D80D1 /* Constants.swift in Sources */,
 				3A226B9429A56D8A004D80D1 /* UserManager.swift in Sources */,
 				3A226B9029A56D8A004D80D1 /* SceneDelegate.swift in Sources */,
 				3A226B9529A56D8A004D80D1 /* UserModel.swift in Sources */,
+				3A55A6F429A57272007A32DB /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
