@@ -1,5 +1,5 @@
 //
-//  LoginPresenter.swift
+//  RegisterPresenter.swift
 //  Firebird
 //
 //  Created by Paulo Rodrigues on 21/02/23.
@@ -7,21 +7,21 @@
 
 import Foundation
 
-protocol LoginPresenterDelegate: AnyObject {
+protocol RegisterPresenterDelegate: AnyObject {
     func showMessage(title: String, message: String)
     func routeToHome()
 }
 
-class LoginPresenter {
+class RegisterPresenter {
     
-    weak var delegate: LoginPresenterDelegate?
+    weak var delegate: RegisterPresenterDelegate?
     
-    func login(userModel: UserModel) {
+    func register(userModel: UserModel) {
         let provider = UserProvider()
         let business = UserBusiness(provider: provider)
         let manager = UserManager(business: business)
         
-        manager.login(
+        manager.register(
             email: userModel.email,
             password: userModel.password
         ) { [weak self] result in
@@ -34,6 +34,6 @@ class LoginPresenter {
             }
             
         }
+        
     }
-    
 }
