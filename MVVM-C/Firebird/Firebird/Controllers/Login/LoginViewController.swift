@@ -10,9 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Closures
+    var onLoginButtonTapped: (() -> Void)?
+    var onRegisterButtonTapped: (() -> Void)?
+    
     // MARK: - Properties
     lazy var loginView: LoginView = {
         let view = LoginView()
+        
+        view.onLoginButtonTapped = { [weak self] in
+            self?.onLoginButtonTapped?()
+        }
+        
+        view.onRegisterButtonTapped = { [weak self] in
+            self?.onRegisterButtonTapped?()
+        }
+        
         return view
     }()
     
