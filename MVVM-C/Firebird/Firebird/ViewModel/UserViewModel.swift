@@ -24,9 +24,7 @@ class UserViewModel {
     }
     
     func getUserFromApi(_ email: String, _ password: String, completionHandler: @escaping (Result<UserViewModel, Error>) -> Void) {
-        let provider = UserProvider()
-        let business = UserBusiness(provider: provider)
-        let manager = UserManager(business: business)
+        let manager = getManager()
         
         manager.login(email: email, password: password) { result in
             switch result {
@@ -36,6 +34,26 @@ class UserViewModel {
                     completionHandler(.failure(error))
             }
         }
+    }
+    
+    func registerUser(_ email: String, _ password: String, completionHandler: @escaping (Result<UserViewModel, Error>) -> Void) {
+        let manager = getManager()
+        
+        manager.register(email: email, password: password) { result in
+            switch result {
+                case .success(let userModel):
+                    completionHandler(.success(UserViewModel(model: userModel)))
+                case .failure(let error):
+                    completionHandler(.failure(error))
+            }
+        }
+    }
+    
+    private func getManager() -> UserManagerProtocol {
+        let provider = UserProvider()
+        let business = UserBusiness(provider: provider)
+        let manager = UserManager(business: business)
+        return manager
     }
     
 }

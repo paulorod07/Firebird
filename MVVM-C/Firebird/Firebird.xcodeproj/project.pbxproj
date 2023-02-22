@@ -29,6 +29,7 @@
 		3A55A70729A596AF007A32DB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70629A596AF007A32DB /* HomeCoordinator.swift */; };
 		3A55A70A29A597F0007A32DB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70929A597F0007A32DB /* UserViewModel.swift */; };
 		3A55A70D29A59BA3007A32DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70C29A59BA3007A32DB /* HomeViewController.swift */; };
+		3A55A70F29A5ABCA007A32DB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70E29A5ABCA007A32DB /* RegisterView.swift */; };
 		3A90AFC029A56BB600865399 /* FirebirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFBF29A56BB600865399 /* FirebirdTests.swift */; };
 		3A90AFCA29A56BB600865399 /* FirebirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFC929A56BB600865399 /* FirebirdUITests.swift */; };
 		3A90AFCC29A56BB600865399 /* FirebirdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFCB29A56BB600865399 /* FirebirdUITestsLaunchTests.swift */; };
@@ -79,6 +80,7 @@
 		3A55A70629A596AF007A32DB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3A55A70929A597F0007A32DB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3A55A70C29A59BA3007A32DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3A55A70E29A5ABCA007A32DB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3A90AFA529A56BB400865399 /* Firebird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A90AFB629A56BB600865399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A90AFBB29A56BB600865399 /* FirebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				3A55A70429A58BFD007A32DB /* RegisterViewController.swift */,
+				3A55A70E29A5ABCA007A32DB /* RegisterView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A55A6FC29A5767C007A32DB /* LoginViewController.swift in Sources */,
+				3A55A70F29A5ABCA007A32DB /* RegisterView.swift in Sources */,
 				3A226B9229A56D8A004D80D1 /* UserBusiness.swift in Sources */,
 				3A55A70D29A59BA3007A32DB /* HomeViewController.swift in Sources */,
 				3A226B9329A56D8A004D80D1 /* UserProvider.swift in Sources */,
