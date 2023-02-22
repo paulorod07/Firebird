@@ -26,6 +26,9 @@
 		3A55A70029A58340007A32DB /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A6FF29A58340007A32DB /* UITextField+Extension.swift */; };
 		3A55A70229A58B84007A32DB /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70129A58B84007A32DB /* RegisterCoordinator.swift */; };
 		3A55A70529A58BFD007A32DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70429A58BFD007A32DB /* RegisterViewController.swift */; };
+		3A55A70729A596AF007A32DB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70629A596AF007A32DB /* HomeCoordinator.swift */; };
+		3A55A70A29A597F0007A32DB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70929A597F0007A32DB /* UserViewModel.swift */; };
+		3A55A70D29A59BA3007A32DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A70C29A59BA3007A32DB /* HomeViewController.swift */; };
 		3A90AFC029A56BB600865399 /* FirebirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFBF29A56BB600865399 /* FirebirdTests.swift */; };
 		3A90AFCA29A56BB600865399 /* FirebirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFC929A56BB600865399 /* FirebirdUITests.swift */; };
 		3A90AFCC29A56BB600865399 /* FirebirdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A90AFCB29A56BB600865399 /* FirebirdUITestsLaunchTests.swift */; };
@@ -73,6 +76,9 @@
 		3A55A6FF29A58340007A32DB /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		3A55A70129A58B84007A32DB /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		3A55A70429A58BFD007A32DB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3A55A70629A596AF007A32DB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		3A55A70929A597F0007A32DB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		3A55A70C29A59BA3007A32DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3A90AFA529A56BB400865399 /* Firebird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A90AFB629A56BB600865399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A90AFBB29A56BB600865399 /* FirebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +194,7 @@
 				3A55A6F329A57272007A32DB /* Coordinator.swift */,
 				3A55A6F529A573EE007A32DB /* LoginCoordinator.swift */,
 				3A55A70129A58B84007A32DB /* RegisterCoordinator.swift */,
+				3A55A70629A596AF007A32DB /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 		3A55A6F929A57656007A32DB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A55A70B29A59B7F007A32DB /* Home */,
 				3A55A70329A58BF4007A32DB /* Register */,
 				3A55A6FA29A57667007A32DB /* Login */,
 			);
@@ -216,6 +224,22 @@
 				3A55A70429A58BFD007A32DB /* RegisterViewController.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		3A55A70829A59790007A32DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A55A70929A597F0007A32DB /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A55A70B29A59B7F007A32DB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A55A70C29A59BA3007A32DB /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3A90AF9C29A56BB400865399 = {
@@ -243,13 +267,14 @@
 		3A90AFA729A56BB400865399 /* Firebird */ = {
 			isa = PBXGroup;
 			children = (
-				3A55A6F929A57656007A32DB /* Controllers */,
-				3A226B7629A56D8A004D80D1 /* Application */,
 				3A226B8129A56D8A004D80D1 /* API */,
+				3A226B7629A56D8A004D80D1 /* Application */,
+				3A55A6F929A57656007A32DB /* Controllers */,
 				3A55A6F229A5724E007A32DB /* Coordinator */,
-				3A226B7F29A56D8A004D80D1 /* Infrastructure */,
-				3A90AFB629A56BB600865399 /* Info.plist */,
 				3A226B7529A56D89004D80D1 /* GoogleService-Info.plist */,
+				3A90AFB629A56BB600865399 /* Info.plist */,
+				3A226B7F29A56D8A004D80D1 /* Infrastructure */,
+				3A55A70829A59790007A32DB /* ViewModel */,
 			);
 			path = Firebird;
 			sourceTree = "<group>";
@@ -535,10 +560,13 @@
 			files = (
 				3A55A6FC29A5767C007A32DB /* LoginViewController.swift in Sources */,
 				3A226B9229A56D8A004D80D1 /* UserBusiness.swift in Sources */,
+				3A55A70D29A59BA3007A32DB /* HomeViewController.swift in Sources */,
 				3A226B9329A56D8A004D80D1 /* UserProvider.swift in Sources */,
+				3A55A70729A596AF007A32DB /* HomeCoordinator.swift in Sources */,
 				3A55A6F629A573EE007A32DB /* LoginCoordinator.swift in Sources */,
 				3A55A6F829A574F6007A32DB /* UIColor+Extension.swift in Sources */,
 				3A226B8B29A56D8A004D80D1 /* ViewController.swift in Sources */,
+				3A55A70A29A597F0007A32DB /* UserViewModel.swift in Sources */,
 				3A226B8F29A56D8A004D80D1 /* AppDelegate.swift in Sources */,
 				3A226B9129A56D8A004D80D1 /* Constants.swift in Sources */,
 				3A226B9429A56D8A004D80D1 /* UserManager.swift in Sources */,

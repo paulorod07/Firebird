@@ -11,7 +11,7 @@ import UIKit
 class LoginView: UIView {
     
     // MARK: - Closures
-    var onLoginButtonTapped: (() -> Void)?
+    var onLoginButtonTapped: ((_ email: String, _ password: String) -> Void)?
     var onRegisterButtonTapped: (() -> Void)?
     
     // MARK: - Properties
@@ -148,7 +148,12 @@ class LoginView: UIView {
     // MARK: - Actions
     @objc
     func loginButtonTapped() {
-        self.onLoginButtonTapped?()
+        guard
+            let email = emailTextField.text,
+            let password = passwordTextField.text
+        else { return }
+        
+        self.onLoginButtonTapped?(email, password)
     }
     
     @objc
